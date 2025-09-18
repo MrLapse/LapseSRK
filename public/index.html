@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header class="header">
+            <h1>QR Code Generator</h1>
+            <p>Convert any text or URL into a QR code instantly</p>
+            
+            <div class="theme-toggle-container">
+                <span>Light</span>
+                <label class="theme-toggle">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Dark</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <form id="qrForm" class="qr-form">
+                <div class="form-group">
+                    <label for="textInput">Enter Text or URL</label>
+                    <textarea 
+                        id="textInput" 
+                        rows="3" 
+                        placeholder="Type your text or URL here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="customization-options">
+                    <div class="option-group">
+                        <label for="qrColor">QR Code Color</label>
+                        <input type="color" id="qrColor" value="#000000">
+                    </div>
+                    <div class="option-group">
+                        <label for="qrSize">QR Code Size</label>
+                        <input type="range" id="qrSize" min="100" max="500" value="200">
+                        <div class="size-value"><span id="sizeValue">200px</span></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="generate-btn">
+                    Generate QR Code
+                </button>
+            </form>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+
+            <div id="qrResult" class="qr-result hidden">
+                <h2>Your QR Code</h2>
+                <div class="qr-image-container">
+                    <img id="qrImage" src="" alt="Generated QR Code">
+                </div>
+                <button id="downloadBtn" class="download-btn">
+                    Download QR Code
+                </button>
+            </div>
+
+            <div id="historySection" class="history-section">
+                <h2>Recent QR Codes</h2>
+                <div id="historyList" class="history-list">
+                    <p class="empty-history">No history yet. Generate your first QR code!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>QR Code Generator &copy; 2023</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

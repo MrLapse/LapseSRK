@@ -1,0 +1,26 @@
+{
+  "name": "qr-generator",
+  "version": "1.0.0",
+  "description": "A web application to convert text to QR codes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "qr-image": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "keywords": [
+    "qr",
+    "generator",
+    "text-to-qr"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "type": "commonjs"
+}
