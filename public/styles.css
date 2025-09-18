@@ -25,9 +25,9 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    font-family: 'Alegreya', serif;
+    background-color: #0d1117; /* Optional: dark background */
+    color: #fefefe; 
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
